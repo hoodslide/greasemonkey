@@ -1,0 +1,16 @@
+// ==UserScript==
+// @name         AllRecipes turn off local offers
+// @namespace    http://hoodslide.net/allrecipes
+// @version      0.1
+// @description  Turn off local offers for allrecipes recipes
+// @author       Steve Hunter
+// @include      http://allrecipes.com/recipe/*
+// ==/UserScript==
+/* jshint -W097 */
+'use strict';
+
+$(function() {
+  if ($('input#myonoffswitch').attr('checked') !== undefined) {
+    $('#local-offers-toggle-slider').click();
+  }
+}
